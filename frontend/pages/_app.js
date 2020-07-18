@@ -1,4 +1,5 @@
 import '@/css/tailwind.css'
+import 'pure-react-carousel/dist/react-carousel.es.css'
 
 import Head from 'next/head'
 

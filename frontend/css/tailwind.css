@@ -8,7 +8,8 @@ html {
     content: '\00B7';
     margin: 0 .25rem 0 .25em;
 }
-
-
+.carousel__inner-slide {
+    margin-right: 4rem;
+}
 @tailwind components;
 @tailwind utilities;
