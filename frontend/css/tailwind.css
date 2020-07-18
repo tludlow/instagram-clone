@@ -1,0 +1,14 @@
+@tailwind base;
+
+html {
+    @apply font-sans antialiased text-black bg-gray-50;
+}
+
+.misc-link::after {
+    content: '\00B7';
+    margin: 0 .25rem 0 .25em;
+}
+
+
+@tailwind components;
+@tailwind utilities;
