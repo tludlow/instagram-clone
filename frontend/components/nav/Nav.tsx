@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import Home from '@/icons/Home'
+import Plane from '@/icons/Plane'
 
 export default function Navbar() {
     const [searching, setSearching] = useState(false)
@@ -104,9 +106,7 @@ export default function Navbar() {
                 <div className="flex items-center flex-grow justify-end space-x-4">
                     {/* house */}
                     <div className="relative flex flex-col items-center">
-                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                        </svg>
+                        <Home className="h-7 w-7" />
 
                         {/* <div className="absolute -bottom-1 h-1 w-1 rounded-full bg-red-500"></div>
                         <div className="absolute w-2 h-2 bg-red-500 transform rotate-45 -bottom-4"></div>
@@ -117,19 +117,7 @@ export default function Navbar() {
 
                     {/* plane */}
                     <Link href="/inbox">
-                        <svg
-                            className="h-7 w-7"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                            <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" />
-                        </svg>
+                        <Plane className="h-7 w-7" />
                     </Link>
 
                     {/* compass */}
