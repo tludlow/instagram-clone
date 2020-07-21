@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
     const [searching, setSearching] = useState(false)
@@ -12,12 +13,14 @@ export default function Navbar() {
 
     return (
         <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
-            <nav className="max-w-5xl h-full mx-auto flex justify-between items-center">
-                <img
-                    className="mt-2 cursor-pointer"
-                    src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-                    alt="Instagram"
-                />
+            <nav className="max-w-5xl h-full mx-auto px-5 md:px-0 flex justify-between items-center">
+                <div className="flex-grow">
+                    <img
+                        className="mt-2 cursor-pointer"
+                        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                        alt="Instagram"
+                    />
+                </div>
                 <div className="relative">
                     <form action="">
                         {/* focus search icon */}
@@ -96,25 +99,38 @@ export default function Navbar() {
                         <span className="max-w-3/5 text-sm truncate">{searched.length > 0 ? searched : 'Search'}</span>
                     </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                    </svg>
+                <div className="flex items-center flex-grow justify-end space-x-4">
+                    {/* house */}
+                    <div className="relative flex flex-col items-center">
+                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
 
-                    <svg
-                        className="h-7 w-7"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                        <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" />
-                    </svg>
+                        {/* <div className="absolute -bottom-1 h-1 w-1 rounded-full bg-red-500"></div>
+                        <div className="absolute w-2 h-2 bg-red-500 transform rotate-45 -bottom-4"></div>
+                        <div className="absolute h-7 px-2 flex justify-center items-center bg-red-500 rounded shadow -bottom-10">
+                            <span className="text-white">1</span>
+                        </div> */}
+                    </div>
 
+                    {/* plane */}
+                    <Link href="/inbox">
+                        <svg
+                            className="h-7 w-7"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                            <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" />
+                        </svg>
+                    </Link>
+
+                    {/* compass */}
                     <svg
                         className="h-7 w-7"
                         viewBox="0 0 24 24"
@@ -129,6 +145,7 @@ export default function Navbar() {
                         <circle cx="12" cy="12" r="9" />
                     </svg>
 
+                    {/* heart */}
                     <svg
                         className="h-7 w-7"
                         fill="none"

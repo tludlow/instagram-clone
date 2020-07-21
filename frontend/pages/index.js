@@ -6,7 +6,7 @@ export default function Index() {
         <Layout title="Instagram" contained>
             <div className="grid grid-cols-3 gap-8">
                 {/* Left col */}
-                <div className="col-span-2">
+                <div className="col-span-3 md:col-span-2">
                     {/* Stories carousel/presentation */}
                     <div className="w-full h-28 bg-white border border-gray-200">
                         <CarouselProvider
@@ -15,7 +15,7 @@ export default function Index() {
                             visibleSlides={6}
                             naturalSlideWidth={110}
                             naturalSlideHeight={100}
-                            step={1}
+                            step={2}
                             infinite={true}
                         >
                             <Slider className="h-24 w-full mt-3 mb-2">
