@@ -15,11 +15,13 @@ export default function Navbar() {
         <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
             <nav className="max-w-5xl h-full mx-auto px-5 md:px-0 flex justify-between items-center">
                 <div className="flex-grow">
-                    <img
-                        className="mt-2 cursor-pointer"
-                        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-                        alt="Instagram"
-                    />
+                    <Link href="/">
+                        <img
+                            className="mt-2 cursor-pointer"
+                            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                            alt="Instagram"
+                        />
+                    </Link>
                 </div>
                 <div className="relative">
                     <form action="">
@@ -131,19 +133,21 @@ export default function Navbar() {
                     </Link>
 
                     {/* compass */}
-                    <svg
-                        className="h-7 w-7"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                        <circle cx="12" cy="12" r="9" />
-                    </svg>
+                    <Link href="/explore">
+                        <svg
+                            className="h-7 w-7"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <polyline points="8 16 10 10 16 8 14 14 8 16" />
+                            <circle cx="12" cy="12" r="9" />
+                        </svg>
+                    </Link>
 
                     {/* heart */}
                     <svg

@@ -4,8 +4,8 @@ export default function Inbox() {
     return (
         <Layout title="Inbox" contained>
             <div className="max-h-85vh h-85vh grid grid-cols-3 bg-white border border-gray-300">
-                <div className="col-span-1 border-r border-gray-300">
-                    <div className="h-15 w-full px-3 flex items-center border-b border-gray-300">
+                <div className="col-span-1 h-85vh flex flex-col border-r border-gray-300">
+                    <div className="h-15  w-full px-3 flex flex-shrink-0 items-center border-b border-gray-300">
                         <h3 className="flex-grow font-semibold text-center">Direct</h3>
                         <svg ariaLabel="New Message" fill="currentColor" height="24" viewBox="0 0 44 44" width="24">
                             <path d="M33.7 44.12H8.5a8.41 8.41 0 01-8.5-8.5v-25.2a8.41 8.41 0 018.5-8.5H23a1.5 1.5 0 010 3H8.5a5.45 5.45 0 00-5.5 5.5v25.2a5.45 5.45 0 005.5 5.5h25.2a5.45 5.45 0 005.5-5.5v-14.5a1.5 1.5 0 013 0v14.5a8.41 8.41 0 01-8.5 8.5z"></path>
@@ -14,10 +14,7 @@ export default function Inbox() {
                         </svg>
                     </div>
 
-                    <div
-                        className="w-full px-3 flex flex-col space-y-4 pt-2 text-sm overflow-y-auto"
-                        style={{ maxHeight: 'calc(85vh - 60px)' }}
-                    >
+                    <div className="w-full px-3 flex flex-col flex-grow space-y-4 pt-2 text-sm overflow-y-auto">
                         <div className="p-1 flex items-center rounded-sm cursor-pointer hover:bg-gray-50">
                             <img
                                 className="h-15 w-15 mr-3 rounded-full"
@@ -31,8 +28,8 @@ export default function Inbox() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-2 max-h-85vh">
-                    <div className="h-15 w-full px-5 flex items-center border-b border-gray-300">
+                <div className="col-span-2 h-85vh flex flex-col">
+                    <div className="h-15 w-full px-5 flex flex-shrink-0 items-center border-b border-gray-300">
                         <div className="flex items-center flex-grow">
                             <img
                                 className="h-6 w-6 mr-3 rounded-full"
@@ -54,10 +51,7 @@ export default function Inbox() {
                             <path d="M24 35.7c-.8 0-1.5-.7-1.5-1.5V23.5h-1.6c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5H24c.8 0 1.5.7 1.5 1.5v12.2c0 .8-.7 1.5-1.5 1.5z"></path>
                         </svg>
                     </div>
-                    <div
-                        className="w-full px-5 py-3 flex flex-col justify-end space-y-3"
-                        style={{ height: 'calc(85vh - 60px)' }}
-                    >
+                    <div className="w-full px-5 py-3 flex flex-col flex-grow justify-end space-y-3">
                         {/* Date */}
                         <div className="w-full py-2 text-center">
                             <span className="text-sm text-gray-600">January 12th 2020</span>
