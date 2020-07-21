@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Home from '@/icons/Home'
 import Plane from '@/icons/Plane'
+import Logo from '@/icons/Logo'
+import Compass from '@/icons/Compass'
+import Heart from '@/icons/Heart'
 
 export default function Navbar() {
     const [searching, setSearching] = useState(false)
@@ -18,11 +21,7 @@ export default function Navbar() {
             <nav className="max-w-5xl h-full mx-auto px-5 md:px-0 flex justify-between items-center">
                 <div className="flex-grow">
                     <Link href="/">
-                        <img
-                            className="mt-2 cursor-pointer"
-                            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-                            alt="Instagram"
-                        />
+                        <Logo />
                     </Link>
                 </div>
                 <div className="relative">
@@ -122,33 +121,11 @@ export default function Navbar() {
 
                     {/* compass */}
                     <Link href="/explore">
-                        <svg
-                            className="h-7 w-7"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                            <circle cx="12" cy="12" r="9" />
-                        </svg>
+                        <Compass className="h-7 w-7" />
                     </Link>
 
                     {/* heart */}
-                    <svg
-                        className="h-7 w-7"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                    </svg>
+                    <Heart className="h-7 w-7" />
                 </div>
             </nav>
         </header>
