@@ -12,7 +12,7 @@ export default function Index() {
                         <CarouselProvider
                             className="relative"
                             totalSlides={10}
-                            visibleSlides={4}
+                            visibleSlides={6}
                             naturalSlideWidth={110}
                             naturalSlideHeight={100}
                             step={2}

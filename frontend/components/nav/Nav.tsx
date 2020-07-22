@@ -10,6 +10,8 @@ export default function Navbar() {
     const [searching, setSearching] = useState(false)
     const [searched, setSearched] = useState('')
 
+    const [mobileDropdown, setMobileDropdown] = useState(false)
+
     const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let text = e.target.value
 
@@ -19,7 +21,7 @@ export default function Navbar() {
     return (
         <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
             <nav className="max-w-5xl h-full mx-auto px-5 lg:px-0 flex justify-between items-center">
-                <div className="flex-grow">
+                <div className="flex flex-1 justify-start">
                     {/* Logo icon */}
                     <div className="md:hidden">
                         <Link href="/">
@@ -133,8 +135,13 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu or icons */}
-                <div className="md:hidden flex flex-grow justify-end">
-                    <svg className="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <div className="md:hidden flex flex-1 justify-end">
+                    <svg
+                        onClick={() => setMobileDropdown(!mobileDropdown)}
+                        className="h-6 w-6 text-black"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
                         <path
                             fillRule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -143,12 +150,12 @@ export default function Navbar() {
                     </svg>
                 </div>
 
-                <div className="hidden md:flex items-center flex-grow justify-end space-x-2 md:space-x-4">
+                <div className="hidden md:flex items-center flex-1 justify-end space-x-2 md:space-x-4">
                     {/* house */}
                     <div className="relative flex flex-col items-center">
                         <Link href="/">
                             <a href="">
-                                <Home className="h-6 w-6 cursor-pointer" />
+                                <Home className="h-7 w-7 cursor-pointer" />
                             </a>
                         </Link>
 
@@ -162,20 +169,20 @@ export default function Navbar() {
                     {/* plane */}
                     <Link href="/inbox">
                         <a href="">
-                            <Plane className="h-6 w-6 cursor-pointer" />
+                            <Plane className="h-7 w-7 cursor-pointer" />
                         </a>
                     </Link>
 
                     {/* compass */}
                     <Link href="/explore">
                         <a href="">
-                            <Compass className="h-6 w-6 cursor-pointer" />
+                            <Compass className="h-7 w-7 cursor-pointer" />
                         </a>
                     </Link>
 
                     {/* heart */}
                     <a href="">
-                        <Heart className="h-6 w-6 cursor-pointer" />
+                        <Heart className="h-7 w-7 cursor-pointer" />
                     </a>
                 </div>
             </nav>
