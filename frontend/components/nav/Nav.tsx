@@ -20,12 +20,10 @@ export default function Navbar() {
         <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
             <nav className="max-w-5xl h-full mx-auto px-5 lg:px-0 flex justify-between items-center">
                 <div className="flex-grow">
-                    <Link href="/">
-                        <>
-                            <a className="hidden sm:block" href="">
-                                <Logo className="w-24 h-8 mt-2 cursor-pointer" />
-                            </a>
-                            <a className="sm:hidden" href="">
+                    {/* Logo icon */}
+                    <div className="md:hidden">
+                        <Link href="/">
+                            <a href="">
                                 <svg
                                     className="h-8 w-8 text-black"
                                     viewBox="0 0 24 24"
@@ -41,8 +39,17 @@ export default function Navbar() {
                                     <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                                 </svg>
                             </a>
-                        </>
-                    </Link>
+                        </Link>
+                    </div>
+
+                    {/* Logo text */}
+                    <div className="hidden md:block">
+                        <Link href="/">
+                            <a href="">
+                                <Logo className="w-24 h-8 mt-2 cursor-pointer" />
+                            </a>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* search */}

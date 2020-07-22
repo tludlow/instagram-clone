@@ -1,9 +1,9 @@
-import Layout from '@/components/layout'
+import Layout from '@/components/Layout'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, DotGroup, Dot } from 'pure-react-carousel'
 
 export default function Index() {
     return (
-        <Layout title="Instagram" contained>
+        <Layout>
             <div className="grid grid-cols-3 gap-4 md:gap-8">
                 {/* Left col */}
                 <div className="col-span-3 md:col-span-2">

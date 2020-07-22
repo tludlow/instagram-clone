@@ -1,8 +1,8 @@
-import Layout from '@/components/layout'
+import Layout from '@/components/Layout'
 
 export default function Inbox() {
     return (
-        <Layout title="Inbox" contained>
+        <Layout title="Inbox">
             <div className="max-h-85vh h-85vh grid grid-cols-3 bg-white border border-gray-300">
                 <div className="col-span-1 h-85vh flex flex-col border-r border-gray-300">
                     <div className="h-15  w-full px-3 flex flex-shrink-0 items-center border-b border-gray-300">

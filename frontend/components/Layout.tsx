@@ -5,7 +5,7 @@ interface LayoutProps {
     title: string;
     contained: boolean;
 }
-const Layout: React.FC<LayoutProps> = ({ title, contained, children }) => {
+const Layout: React.FC<LayoutProps> = ({ title = 'Instagram', contained = true, children }) => {
     return (
         <div className="text-black w-full">
             <Head>
