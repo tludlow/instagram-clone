@@ -18,14 +18,34 @@ export default function Navbar() {
 
     return (
         <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
-            <nav className="max-w-5xl h-full mx-auto px-5 md:px-0 flex justify-between items-center">
+            <nav className="max-w-5xl h-full mx-auto px-5 lg:px-0 flex justify-between items-center">
                 <div className="flex-grow">
                     <Link href="/">
-                        <a href="">
-                            <Logo />
-                        </a>
+                        <>
+                            <a className="hidden sm:block" href="">
+                                <Logo className="w-24 h-8 mt-2 cursor-pointer" />
+                            </a>
+                            <a className="sm:hidden" href="">
+                                <svg
+                                    className="h-8 w-8 text-black"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                                </svg>
+                            </a>
+                        </>
                     </Link>
                 </div>
+
+                {/* search */}
                 <div className="relative">
                     <form action="">
                         {/* focus search icon */}
@@ -104,12 +124,24 @@ export default function Navbar() {
                         <span className="max-w-3/5 text-sm truncate">{searched.length > 0 ? searched : 'Search'}</span>
                     </div>
                 </div>
-                <div className="flex items-center flex-grow justify-end space-x-4">
+
+                {/* Menu or icons */}
+                <div className="md:hidden flex flex-grow justify-end">
+                    <svg className="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            fillRule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clipRule="evenodd"
+                        ></path>
+                    </svg>
+                </div>
+
+                <div className="hidden md:flex items-center flex-grow justify-end space-x-2 md:space-x-4">
                     {/* house */}
                     <div className="relative flex flex-col items-center">
                         <Link href="/">
                             <a href="">
-                                <Home className="h-7 w-7 cursor-pointer" />
+                                <Home className="h-6 w-6 cursor-pointer" />
                             </a>
                         </Link>
 
@@ -123,20 +155,20 @@ export default function Navbar() {
                     {/* plane */}
                     <Link href="/inbox">
                         <a href="">
-                            <Plane className="h-7 w-7 cursor-pointer" />
+                            <Plane className="h-6 w-6 cursor-pointer" />
                         </a>
                     </Link>
 
                     {/* compass */}
                     <Link href="/explore">
                         <a href="">
-                            <Compass className="h-7 w-7 cursor-pointer" />
+                            <Compass className="h-6 w-6 cursor-pointer" />
                         </a>
                     </Link>
 
                     {/* heart */}
                     <a href="">
-                        <Heart className="h-7 w-7 cursor-pointer" />
+                        <Heart className="h-6 w-6 cursor-pointer" />
                     </a>
                 </div>
             </nav>

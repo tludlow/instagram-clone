@@ -4,7 +4,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, DotGrou
 export default function Index() {
     return (
         <Layout title="Instagram" contained>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-4 md:gap-8">
                 {/* Left col */}
                 <div className="col-span-3 md:col-span-2">
                     {/* Stories carousel/presentation */}
@@ -12,7 +12,7 @@ export default function Index() {
                         <CarouselProvider
                             className="relative"
                             totalSlides={10}
-                            visibleSlides={6}
+                            visibleSlides={4}
                             naturalSlideWidth={110}
                             naturalSlideHeight={100}
                             step={2}
@@ -208,7 +208,7 @@ export default function Index() {
                 </div>
 
                 {/* Right col */}
-                <div className="">
+                <div className="col-span-3 row-start-1 md:col-span-1 md:row-start-auto">
                     <div className="flex items-center space-x-3">
                         <img
                             className="h-14 w-14 rounded-full cursor-pointer"
@@ -251,7 +251,7 @@ export default function Index() {
                     </div>
 
                     {/* Misc links and copyright */}
-                    <div className="mt-6 text-gray-400 text-xs">
+                    <div className="hidden md:block mt-6 text-gray-400 text-xs">
                         <ul className="flex flex-wrap">
                             <li className="misc-link">About</li>
                             <li className="misc-link">Help</li>
