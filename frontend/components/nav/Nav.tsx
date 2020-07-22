@@ -10,7 +10,7 @@ export default function Navbar() {
     const [searching, setSearching] = useState(false)
     const [searched, setSearched] = useState('')
 
-    const onSearchChange = (e) => {
+    const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let text = e.target.value
 
         setSearched(text)
@@ -21,7 +21,9 @@ export default function Navbar() {
             <nav className="max-w-5xl h-full mx-auto px-5 md:px-0 flex justify-between items-center">
                 <div className="flex-grow">
                     <Link href="/">
-                        <Logo />
+                        <a href="">
+                            <Logo />
+                        </a>
                     </Link>
                 </div>
                 <div className="relative">
@@ -105,7 +107,11 @@ export default function Navbar() {
                 <div className="flex items-center flex-grow justify-end space-x-4">
                     {/* house */}
                     <div className="relative flex flex-col items-center">
-                        <Home className="h-7 w-7" />
+                        <Link href="/">
+                            <a href="">
+                                <Home className="h-7 w-7 cursor-pointer" />
+                            </a>
+                        </Link>
 
                         {/* <div className="absolute -bottom-1 h-1 w-1 rounded-full bg-red-500"></div>
                         <div className="absolute w-2 h-2 bg-red-500 transform rotate-45 -bottom-4"></div>
@@ -116,16 +122,22 @@ export default function Navbar() {
 
                     {/* plane */}
                     <Link href="/inbox">
-                        <Plane className="h-7 w-7" />
+                        <a href="">
+                            <Plane className="h-7 w-7 cursor-pointer" />
+                        </a>
                     </Link>
 
                     {/* compass */}
                     <Link href="/explore">
-                        <Compass className="h-7 w-7" />
+                        <a href="">
+                            <Compass className="h-7 w-7 cursor-pointer" />
+                        </a>
                     </Link>
 
                     {/* heart */}
-                    <Heart className="h-7 w-7" />
+                    <a href="">
+                        <Heart className="h-7 w-7 cursor-pointer" />
+                    </a>
                 </div>
             </nav>
         </header>
