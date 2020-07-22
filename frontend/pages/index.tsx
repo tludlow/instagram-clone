@@ -71,7 +71,7 @@ export default function Index() {
                                     src="https://scontent-vie1-1.cdninstagram.com/v/t51.2885-19/96493051_169399917785899_3453132171017977856_n.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_ohc=0U-Fhq_WOvEAX95hD0n&oh=69c36fcedcb05327d5cd59690b72d95b&oe=5F3B8B84"
                                     alt="healthychefsteph"
                                 />
-                                <h5>healthychefsteph</h5>
+                                <h5 className="font-semibold text-sm">healthychefsteph</h5>
                             </div>
                             <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
