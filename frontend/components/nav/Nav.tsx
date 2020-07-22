@@ -152,11 +152,11 @@ export default function Navbar() {
                             </a>
                         </Link>
 
-                        <div className="absolute -bottom-1 h-1 w-1 rounded-full bg-red-500"></div>
+                        {/* <div className="absolute -bottom-1 h-1 w-1 rounded-full bg-red-500"></div>
                         <div className="absolute w-2 h-2 bg-red-500 transform rotate-45 -bottom-4"></div>
                         <div className="absolute h-7 px-2 flex justify-center items-center bg-red-500 rounded shadow -bottom-10">
                             <span className="text-white">7</span>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* plane */}
