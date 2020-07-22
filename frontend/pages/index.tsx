@@ -27,6 +27,7 @@ export default function Index() {
                                     >
                                         <div className="flex flex-col items-center">
                                             <Image
+                                                hasMasterSpinner={false}
                                                 className="h-10 w-12 rounded-full p-0.5 border-2 border-red-500"
                                                 src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faceindex=2&facepad=1.5&w=300&h=300"
                                                 alt=""
