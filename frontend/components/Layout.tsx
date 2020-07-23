@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Nav from '@/components/nav/Nav'
 
 interface LayoutProps {
-    title?: string;
-    contained?: boolean;
+    title?: string
+    contained?: boolean
 }
 const Layout: React.FC<LayoutProps> = ({ title = 'Instagram', contained = true, children }) => {
     return (
