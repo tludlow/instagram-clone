@@ -1,8 +1,6 @@
-interface PlaneProps {
-    className?: string;
-}
+import { Icon } from './IfcIcon'
 
-export default function Plane({ className }: PlaneProps) {
+export default function Plane({ className }: Icon) {
     return (
         <svg
             className={`${className}`}

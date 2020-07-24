@@ -1,8 +1,5 @@
-interface HeartProps {
-    className?: string;
-}
-
-export default function Heart({ className }: HeartProps) {
+import { Icon } from './IfcIcon'
+export default function Heart({ className }: Icon) {
     return (
         <svg
             className={`${className}`}

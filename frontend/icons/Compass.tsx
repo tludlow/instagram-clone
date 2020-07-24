@@ -1,8 +1,6 @@
-interface CompassProps {
-    className?: string;
-}
+import { Icon } from './IfcIcon'
 
-export default function Compass({ className }: CompassProps) {
+export default function Compass({ className }: Icon) {
     return (
         <svg
             className={`${className}`}

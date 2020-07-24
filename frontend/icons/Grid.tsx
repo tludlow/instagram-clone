@@ -1,8 +1,6 @@
-interface GridProps {
-    className?: string;
-}
+import { Icon } from './IfcIcon'
 
-export default function Grid({ className }: GridProps) {
+export default function Grid({ className }: Icon) {
     return (
         <svg
             className={`${className}`}
