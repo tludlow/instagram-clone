@@ -5,12 +5,14 @@ import Plane from '@/icons/Plane'
 import Logo from '@/icons/Logo'
 import Compass from '@/icons/Compass'
 import Heart from '@/icons/Heart'
+import SearchDropdown from './SearchDropdown'
 
 export default function Navbar() {
     const [searching, setSearching] = useState(false)
     const [searched, setSearched] = useState('')
 
     const [mobileDropdown, setMobileDropdown] = useState(false)
+    const [searchDropdownOpen, setSearchDropdownOpen] = useState(false)
 
     const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let text = e.target.value
@@ -132,6 +134,8 @@ export default function Navbar() {
                         </span>
                         <span className="max-w-3/5 text-sm truncate">{searched.length > 0 ? searched : 'Search'}</span>
                     </div>
+
+                    <SearchDropdown visible={searching} />
                 </div>
 
                 {/* Menu or icons */}

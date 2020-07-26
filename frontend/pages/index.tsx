@@ -1,7 +1,12 @@
 import Layout from '@/components/Layout'
+import SingleImage from '@/components/posts/SingleImage'
+
+import Link from 'next/link'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, DotGroup, Dot } from 'pure-react-carousel'
 
 export default function Index() {
+    const username = 'thisisacoolusername'
+
     return (
         <Layout>
             <div className="grid grid-cols-3 gap-4 md:gap-8">
@@ -63,8 +68,19 @@ export default function Index() {
                         </CarouselProvider>
                     </div>
 
+                    {/* Image container */}
+                    <div className="mt-5 space-y-5">
+                        <SingleImage
+                            username="jeffreythewombat"
+                            userPhoto="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.5&w=300&h=300"
+                            imageUrl="https://images.unsplash.com/photo-1533840745892-dec41d8b39be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+                            likes={42093}
+                            caption="wow omg this is amazing you can even have emojis 🤷‍♀️"
+                            commentCount={42}
+                        />
+                    </div>
                     {/* Home Image */}
-                    <div className="w-full mt-12 border border-gray-300 rounded-xs">
+                    {/* <div className="w-full mt-12 border border-gray-300 rounded-xs">
                         <div className="h-13 w-full px-5 flex justify-between items-center bg-white">
                             <div className="flex items-center space-x-2">
                                 <img
@@ -152,9 +168,9 @@ export default function Index() {
                                 <span className="font-semibold mr-2">healthychefsteph</span>
                                 Happy Friday everyone💞
                             </p>
-                            <p className="mt-2 font-semibold text-sm text-gray-400">View all 56 comments</p>
-                            {/* Top comments */}
-                            <div className="w-full flex justify-between items-center">
+                            <p className="mt-2 font-semibold text-sm text-gray-400">View all 56 comments</p> */}
+                    {/* Top comments */}
+                    {/* <div className="w-full flex justify-between items-center">
                                 <p className="text-sm">
                                     <span className="font-semibold mr-2">Jeffwow</span>omg this is so amazing
                                 </p>
@@ -204,7 +220,7 @@ export default function Index() {
                             </form>
                             <p className="text-blue-300">Post</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right col */}
@@ -215,7 +231,12 @@ export default function Index() {
                             src="https://images.unsplash.com/photo-1571536338851-d312476c7b11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faceindex=2&facepad=1.5&w=300&h=300"
                             alt="thiscoolusername"
                         />
-                        <h3 className="font-semibold cursor-pointer">thiscoolusername</h3>
+
+                        <Link href="/[id]" as={`/${username}`}>
+                            <a className="font-semibold cursor-pointer" href="">
+                                {username}
+                            </a>
+                        </Link>
                     </div>
 
                     {/* Suggestions for you */}
