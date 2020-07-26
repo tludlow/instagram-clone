@@ -19,7 +19,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className="w-full h-13 mb-8 bg-white border-b border-gray-300">
+        <header className="fixed top-0 w-full h-13 bg-white border-b border-gray-300">
             <nav className="max-w-5xl h-full mx-auto px-5 lg:px-0 flex justify-between items-center">
                 <div className="flex flex-1 justify-start">
                     {/* Logo icon */}

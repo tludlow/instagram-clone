@@ -2,6 +2,7 @@ import '@/css/tailwind.css'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 import Head from 'next/head'
+import Nav from '@/components/nav/Nav'
 import { AppProps } from 'next/app'
 
 import { Provider } from 'react-redux'
@@ -12,7 +13,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 export default function App({ Component, pageProps }: AppProps) {
     const store = useStore(pageProps.initialReduxState)
     const persistor = persistStore(store)
-
     return (
         <>
             <Head>
