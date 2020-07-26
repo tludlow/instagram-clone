@@ -9,15 +9,13 @@ import SearchDropdown from './SearchDropdown'
 
 export default function Navbar() {
     const [searching, setSearching] = useState(false)
-    const [searched, setSearched] = useState('')
-
+    const [searchedText, setSearchedText] = useState('')
     const [mobileDropdown, setMobileDropdown] = useState(false)
-    const [searchDropdownOpen, setSearchDropdownOpen] = useState(false)
 
     const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let text = e.target.value
 
-        setSearched(text)
+        setSearchedText(text)
     }
 
     return (
@@ -82,7 +80,7 @@ export default function Navbar() {
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             onMouseDown={() => {
-                                setSearched('')
+                                setSearchedText('')
                                 setSearching(false)
                             }}
                         >
@@ -106,7 +104,7 @@ export default function Navbar() {
                             type="text"
                             name="nav-search"
                             id="nav-search"
-                            value={searched}
+                            value={searchedText}
                             autoComplete="off"
                         />
                     </form>
@@ -132,7 +130,9 @@ export default function Navbar() {
                                 <line x1="21" y1="21" x2="15" y2="15" />
                             </svg>
                         </span>
-                        <span className="max-w-3/5 text-sm truncate">{searched.length > 0 ? searched : 'Search'}</span>
+                        <span className="max-w-3/5 text-sm truncate">
+                            {searchedText.length > 0 ? searchedText : 'Search'}
+                        </span>
                     </div>
 
                     <SearchDropdown visible={searching} />
