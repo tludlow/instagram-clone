@@ -13,7 +13,7 @@ const SearchDropdown: React.FC<SearchDropdownType> = ({ visible }) => {
             <div
                 className={`${
                     visible ? 'flex' : 'hidden'
-                } h-72 w-125 absolute top-14 -left-6 z-10 flex-col bg-white border border-gray-200 overflow-y-auto rounded shadow`}
+                } h-72 w-125 absolute top-14 -left-6 z-20 flex-col bg-white border border-gray-200 overflow-y-auto rounded shadow`}
             >
                 <SearchPerson />
                 <SearchTrend />
