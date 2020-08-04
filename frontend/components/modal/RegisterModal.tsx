@@ -5,8 +5,8 @@ export default function RegisterModal() {
     return (
         <>
             <button onClick={() => setOpen(!open)}>Open Modal</button>
-            {open && 
-            .}
+            {/* {open && 
+            .} */}
         </>
     )
 }
